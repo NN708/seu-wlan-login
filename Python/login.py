@@ -43,7 +43,7 @@ if r.status_code != 200:
     exit()
 login = json.loads(pattern.findall(r.text)[0])
 
-if login['result'] != 1:
+if login['result'] != '1':
     message = base64.b64decode(login['msg']).decode()
     if message == 'ldap auth error':
         print('错误：用户名或密码错误。')
