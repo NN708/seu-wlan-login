@@ -21,6 +21,11 @@ Download **[login.py](https://github.com/NN708/seu-wlan-login/blob/master/Python
 python login.py
 ```
 
+
+### 服务器或无人值守的计算机 For servers or unattached access
+
+请运行 `Python/auto-reconnect-win.py` （用于 Windows）。
+
 ## iOS
 
 iOS 脚本使用官方的[“快捷指令”应用](https://itunes.apple.com/us/app/id915249334?at=10l64N)制作，可实现在 Widget 或 Siri 中一键登录 seu-wlan 的功能。
