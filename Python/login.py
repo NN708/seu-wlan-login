@@ -11,7 +11,7 @@ def login():
         pattern = re.compile(r'\{.*\}')
 
         try:
-            r = requests.get('http://202.119.25.2/drcom/chkstatus?callback=dr1002')
+            r = requests.get('http://w.seu.edu.cn/drcom/chkstatus?callback=dr1002')
         except OSError:
             print('错误：连接失败。')
             return False
@@ -45,7 +45,7 @@ def login():
             print('错误：请在配置文件 config.json 中填写用户名及密码。')
             return False
 
-        login_url = 'http://202.119.25.2:801/eportal/?c=Portal&a=login&callback=dr1003&login_method=1&user_account=%2C0%2C' + config['username'] + '&user_password=' + config['password'] + '&wlan_user_ip=' + status['v46ip'] + '&wlan_ac_name=jlh_me60'
+        login_url = 'https://w.seu.edu.cn:801/eportal/?c=Portal&a=login&callback=dr1003&login_method=1&user_account=%2C0%2C' + config['username'] + '&user_password=' + config['password'] + '&wlan_user_ip=' + status['v46ip'] + '&wlan_ac_name=spl_me60'
         try:
             r = requests.get(login_url)
         except OSError:
