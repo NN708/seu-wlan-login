@@ -11,7 +11,7 @@ def login():
         pattern = re.compile(r'\{.*\}')
 
         try:
-            r = requests.get('http://w.seu.edu.cn/drcom/chkstatus?callback=dr1002')
+            r = requests.get('https://w.seu.edu.cn/drcom/chkstatus?callback=dr1002')
         except OSError:
             print('错误：连接失败。')
             return False
