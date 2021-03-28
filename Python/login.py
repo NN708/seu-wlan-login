@@ -45,7 +45,7 @@ def login():
             print('错误：请在配置文件 config.json 中填写用户名及密码。')
             return False
 
-        login_url = 'https://w.seu.edu.cn:801/eportal/?c=Portal&a=login&callback=dr1003&login_method=1&user_account=%2C0%2C' + config['username'] + '&user_password=' + config['password'] + '&wlan_user_ip=' + status['v46ip'] + '&wlan_ac_name=spl_me60'
+        login_url = 'https://w.seu.edu.cn:801/eportal/?c=Portal&a=login&callback=dr1003&login_method=1&user_account=%2C0%2C' + config['username'] + '&user_password=' + config['password'] + '&wlan_user_ip=' + status['v46ip']
         try:
             r = requests.get(login_url)
         except OSError:
